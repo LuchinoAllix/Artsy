@@ -6,15 +6,22 @@ const lineLen = 300;
 const lineLenRange = 4/5
 const lineCount = width;
 
+let canva;
+
 function setup() {
-    createCanvas(width, height);
-    background("white");
-    frameRate(10);
+    canva = createCanvas(width, height);
     lines(true);
+    lines(false);
+
+    document.getElementById("save-button").addEventListener("click", () => {
+
+        const name = document.getElementById("save-name").value.trim() || "canva";
+
+        saveCanvas(canva.canvas, name, "png");
+    });
 }
 
 function draw() {
-    lines(false);
     noLoop();
 }
 
@@ -22,7 +29,6 @@ function lines(all){
     let i = 0;
     while ( i < lineCount ){
         let decrease = (lineCount-i)/lineCount
-        console.log(decrease);
         myLine(0,height - i, decrease);
         myLine(i,height, decrease);
         all ? i+=2 : i += Math.random()*20 ;

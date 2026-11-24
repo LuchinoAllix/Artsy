@@ -11,4 +11,46 @@ body {
 
   /* This centers our sketch vertically. */
   align-items: center;
+
+}
+
+
+#save-name,
+#save-button {
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    margin: 8px 5px;
+}
+
+#save-name {
+    outline: none;
+    background: #fff;
+}
+
+#save-name:focus {
+    border-color: #cd4dd4;
+    box-shadow: 0 0 0 3px rgba(205, 77, 212, 0.15);
+}
+
+#save-button {
+    background: #cd4dd4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#save-button:hover {
+    background: #a936b0;
+    transform: translateY(-2px);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
