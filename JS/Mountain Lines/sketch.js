@@ -27,3 +27,8 @@ function lines(){
     }
 }
 
+function genMountainCoords(){
+    // todo
+    return [];
+}
+
