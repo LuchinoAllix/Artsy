@@ -28,7 +28,11 @@ function lines(){
 }
 
 function genMountainCoords(){
-    // todo
+    let coords = [];
+    for (let i = 0; i < Math.random()* 8; i++){
+        coords.push();
+        //todo
+    }
     return [];
 }
 
